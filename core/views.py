@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render
+
 
 @csrf_exempt
 def hello_form(request):
@@ -16,3 +18,8 @@ def hello_post(request):
         return HttpResponse("Hello World")
     else:
         return HttpResponse("Use POST para ver a mensagem.")
+
+# View para a página inicial do site
+def index(request):
+    return render(request, 'core/index.html')
+

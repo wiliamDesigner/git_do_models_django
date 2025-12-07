@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Detalhes da Pessoa
+{% endblock %}
+
+{% block content %}
+<h2>{{ pessoa.nome }}</h2>
+<p>Idade: {{ pessoa.idade }}</p>
+<p>Rua: {{ pessoa.rua }}</p>
+<p>Bairro: {{ pessoa.bairro }}</p>
+<p>Telefone: {{ pessoa.telefone }}</p>
+{% endblock %}
