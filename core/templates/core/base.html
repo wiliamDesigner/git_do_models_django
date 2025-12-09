@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Meu Site Django{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h1>Meu Site Django</h1>
+    </header>
+
+    <aside>
+        {% include 'core/sidebar.html' %}
+    </aside>
+
+    <main>
+        {% block content %}
+
+        
+        {% endblock %}
+    </main>
+</body>
+</html>
