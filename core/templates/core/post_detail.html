@@ -1,13 +1,9 @@
 {% extends "core/base.html" %}
 
 {% block content %}
-<h1>{{ post.titulo }}</h1>
-
-<p>{{ post.conteudo }}</p>
-
-<p><strong>Dono:</strong> {{ post.dono.username }}</p>
-
-<p><strong>Status:</strong> {{ post.status }}</p>
-
-<p><strong>Criado em:</strong> {{ post.criado_em }}</p>
+<article class="post-detail">
+    <h2>{{ post.titulo }}</h2>
+    <p>{{ post.conteudo }}</p>
+    <a href="/">← Voltar</a>
+</article>
 {% endblock %}

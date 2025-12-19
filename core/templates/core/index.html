@@ -1,10 +1,17 @@
-{% extends 'core/base.html' %}
-
-{% block title %}
-Página Inicial
-{% endblock %}
+{% extends "core/base.html" %}
 
 {% block content %}
-<h2>Bem-vindo ao meu site!</h2>
-<p>Este é o index.html carregado com Django Templates.</p>
+<h2>Últimos Posts</h2>
+
+{% for post in posts %}
+    <article class="post">
+        <h3>
+            <a href="/post/{{ post.id }}/">{{ post.titulo }}</a>
+        </h3>
+        <p>{{ post.conteudo|truncatewords:20 }}</p>
+    </article>
+{% empty %}
+    <p>Nenhum post publicado ainda.</p>
+{% endfor %}
+
 {% endblock %}

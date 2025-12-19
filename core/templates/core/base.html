@@ -1,24 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Meu Site Django{% endblock %}</title>
+    <title>Meu Blog Django</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
 </head>
-
 <body>
-    <header>
-        <h1>Meu Site Django</h1>
-    </header>
 
-    <aside>
-        {% include 'core/sidebar.html' %}
-    </aside>
+<header class="header">
+    <h1>Meu Blog Django</h1>
+</header>
 
-    <main>
-        {% block content %}
-
-        
-        {% endblock %}
+<div class="container">
+    <main class="content">
+        {% block content %}{% endblock %}
     </main>
+
+    <aside class="sidebar">
+        {% include "core/sidebar.html" %}
+    </aside>
+</div>
+
+<footer class="footer">
+    <p>Projeto Django • William</p>
+</footer>
+
 </body>
 </html>
